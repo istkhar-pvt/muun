@@ -1,7 +1,8 @@
 import asyncio
 from datetime import datetime
 from pyrogram.enums import ChatType
-from pytgcalls.exceptions import GroupCallNotFound
+except Exception as e:
+    pass
 import config
 from RessoMusic import app
 from RessoMusic.misc import db
