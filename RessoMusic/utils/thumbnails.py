@@ -193,14 +193,10 @@ async def get_qthumb(vidid):
     except Exception as e:
         print(e)
         return YOUTUBE_IMG_URL
-# --- Compatibility aliases for old plugins ---
+# --- Async compatibility helpers ---
 
-# If gen_thumb exists, expose get_thumb
-try:
-    gen_thumb
-except NameError:
-    def gen_thumb(*args, **kwargs):
-        return None
+async def gen_thumb(*args, **kwargs):
+    return None
 
-def get_thumb(*args, **kwargs):
-    return gen_thumb(*args, **kwargs)
+async def get_thumb(*args, **kwargs):
+    return None
